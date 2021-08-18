@@ -89,9 +89,11 @@ header .container {
 .site-nav:hover,
 .site-nav:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav-link-current {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   display: inline-block;
   position: relative;
@@ -123,10 +125,12 @@ header .container {
 .contacts:hover > .header-icon,
 .contacts:focus > .header-icon {
   fill: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:hover,
 .contacts:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ========= CONTACTS ======= */
@@ -335,10 +339,12 @@ button {
 
 .team-photo {
   background-color: #ffffff;
-  border-bottom: rgba(0, 0, 0, 0.25) solid 4px;
-  border-radius: 4px;
   padding: 30px 32px 30px 32px;
   text-align: center;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .list.teamcards {
   display: flex;
@@ -399,10 +405,12 @@ button {
 .social-list-link:focus {
   /* fill: var(--primary-background-color); */
   background-color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover .social-media-icon,
 .social-list-link:focus .social-media-icon {
   fill: var(--primary-background-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media-icon {
   fill: #afb1b8;
@@ -430,6 +438,7 @@ button {
   height: 92px;
   border: solid 1px #afb1b8;
   margin-right: 30px;
+  border-radius: 4px;
 }
 .customers-icon-link {
   display: flex;
@@ -438,19 +447,21 @@ button {
   align-items: center;
   justify-content: center;
 }
-.customers-icon-link .customer-icon:focus,
+/* .customers-icon-link .customer-icon:focus,
 .customers-icon-link .customer-icon:hover {
   background-color: var(--primary-background-color);
   border-color: var(--accent-color);
   fill: var(--accent-color);
-}
+} */
 .customer-icon-list:hover,
 .customer-icon-list:focus {
   border-color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-icon-list:hover .customer-icon,
 .customer-icon-list:focus .customer-icon {
   fill: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-icon {
@@ -502,6 +513,7 @@ footer {
 .email:hover,
 .email:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-media-icon {
@@ -522,6 +534,7 @@ footer {
 .footer-link-icons:focus,
 .footer-link-icons:hover {
   background-color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join {
@@ -599,10 +612,9 @@ footer {
 .nav-portfolio {
   display: flex;
 }
-ul.list.portfolio-btn {
+.portfolio-btn {
   display: flex;
   margin-bottom: 50px;
-  /* padding-top: 94px; */
   justify-content: center;
 }
 
@@ -627,15 +639,17 @@ ul.list.portfolio-btn {
 .button-secondary:hover {
   color: var(--primary-background-color);
   background-color: var(--accent-color);
-  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-ul.list-of-exmp {
+.list-of-exmp {
   display: flex;
   flex-wrap: wrap;
   margin-right: -30px;
 }
-li.item {
+.item {
   margin-right: 30px;
   width: 370px;
 }
@@ -673,8 +687,8 @@ li.item:nth-child(-n + 6) {
 .item:focus,
 .item:hover {
   border-color: rgba(238, 238, 238, 1);
-  /* box-shadow: rgba(0, 0, 0, 0.16); */
-  box-shadow: 0 10px 10px -5px rgba(238, 238, 238, 1);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .text-overlay {
   position: absolute;
@@ -687,7 +701,7 @@ li.item:nth-child(-n + 6) {
   width: 100%;
   top: 0%;
   left: 0%;
-  overflow: auto;
+  overflow: hidden;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -703,7 +717,7 @@ li.item:nth-child(-n + 6) {
 /* =======  BACKDROP AND MODAL */
 .backdrop {
   background-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -878,7 +892,7 @@ li.item:nth-child(-n + 6) {
   cursor: pointer;
   transition: color 250ms linear, background-color 250ms linear;
   color: var(--primary-background-color);
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .modal-form-btn:hover,

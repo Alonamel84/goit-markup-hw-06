@@ -82,19 +82,18 @@ header .container {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
+  transition: color;
   display: inline-block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav:hover,
 .site-nav:focus {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav-link-current {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
   position: relative;
 }
@@ -125,12 +124,12 @@ header .container {
 .contacts:hover > .header-icon,
 .contacts:focus > .header-icon {
   fill: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:hover,
 .contacts:focus {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ========= CONTACTS ======= */
@@ -399,21 +398,21 @@ button {
   height: 44px;
   border-radius: 50%;
   background-color: var(--primary-background-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
   /* fill: var(--primary-background-color); */
   background-color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover .social-media-icon,
 .social-list-link:focus .social-media-icon {
   fill: var(--primary-background-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-icon {
@@ -436,36 +435,38 @@ button {
 .customer-icon-list {
   width: 170px;
   height: 92px;
-  border: solid 1px #afb1b8;
+  /* border: solid 1px #afb1b8; */
   margin-right: 30px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
+
 .customers-icon-link {
   display: flex;
   width: 170px;
   height: 92px;
   align-items: center;
+  border-radius: 4px;
+  border: 1px solid rgba(175, 177, 184, 1);
+  background-color: transparent;
+  fill: rgba(175, 177, 184, 1);
   justify-content: center;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .customers-icon-link .customer-icon:focus,
-.customers-icon-link .customer-icon:hover {
-  background-color: var(--primary-background-color);
+
+.customers-icon-link:hover,
+.customers-icon-link:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
-} */
-.customer-icon-list:hover,
-.customer-icon-list:focus {
-  border-color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customer-icon-list:hover .customer-icon,
-.customer-icon-list:focus .customer-icon {
+.customers-icon-link:hover .customer-icon,
+.customers-icon-link:focus .customer-icon {
   fill: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ======  FOOTER ========= */
@@ -530,13 +531,12 @@ footer {
   justify-content: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link-icons:focus,
 .footer-link-icons:hover {
   background-color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .join {
   /* margin: 0 auto; */
   justify-content: space-between;
@@ -573,7 +573,7 @@ footer {
   text-align: center;
   cursor: pointer;
   color: var(--primary-background-color);
-  transition: var(--primary-background-color) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   border: transparent;
 }
 .icon-subscribe {
@@ -806,6 +806,7 @@ li.item:nth-child(-n + 6) {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input:focus {
   border-color: var(--accent-color);
@@ -819,10 +820,10 @@ li.item:nth-child(-n + 6) {
   display: block;
   width: 18px;
   height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input:focus + .modal-form-icon {
   fill: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-comment {
   width: 100%;
@@ -834,6 +835,7 @@ li.item:nth-child(-n + 6) {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-comment:focus {
   border-color: var(--accent-color);
@@ -903,5 +905,4 @@ li.item:nth-child(-n + 6) {
 .modal-form-btn:focus {
   color: #ffffff;
   background-color: var(--accent-color);
-  transition: var(--accent-color) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

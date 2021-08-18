@@ -246,14 +246,19 @@ img {
   font-size: 14px;
   line-height: 1.71;
 }
-.list-of-features {
+/* .list-of-features {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
+} */
+.list-of-features {
+  display: flex;
+  margin-left: -30px;
 }
 
 .item-feature {
   flex-basis: calc(100% / 4 - 30px);
+  margin-left: var(--card-set-item);
 }
 
 .scope {

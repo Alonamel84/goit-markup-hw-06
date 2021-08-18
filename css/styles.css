@@ -594,6 +594,7 @@ footer {
 }
 .footer-form-input {
   margin-right: 12px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px rgba(0, 0, 0, 0.15);
@@ -855,6 +856,7 @@ li.item:nth-child(-n + 6) {
   line-height: 1.7;
   margin-bottom: 30px;
   margin-top: 20px;
+  margin-left: 13px;
 }
 
 .modal-form-checkbox-label::before {
@@ -868,7 +870,7 @@ li.item:nth-child(-n + 6) {
 }
 .modal-form-checkbox-link {
   font-size: 14px;
-  height: 1;
+  line-height: 1.71;
   color: var(--accent-color);
   text-decoration: underline;
 }
